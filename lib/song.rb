@@ -13,7 +13,6 @@ class Song
   
   def self.artist(name)
     @name = Artist.new(name)
-    
   end
   
   def self.new_by_filename(filename)
@@ -21,11 +20,9 @@ class Song
     song = self.new(file[1])
     song.artist_name = file[0]
     song
-   
-  end
+   end
 
   def artist=(artist)
-    
     @artist = artist unless @artist
     artist.add_song(self) unless artist.songs.include?(self)
   end
